@@ -1,0 +1,51 @@
+ játékot ketten játsszák, körökre bontott fordulókból áll. Két szuperhős harcát követhetjük nyomon.
+1. fordulóban ki kell választani a karakterünkkel használni kívánt tulajdonságokat, képességeket a Hős-
+
+Üzletből. Ez mindkét játékosra igaz.
+A 2. fordulóban mérkőzések következnek, ahol a játékosok felváltva választanak, mit akarnak csinálni
+
+az aktuális körben. (például orvosságot iszik)
+A játék több mérkőzésből is áll, például addig tart, míg az egyik nem rendelkezik 3-mal több
+
+győzelemmel, mint a másik. (tehát például 2-3 esetén folytatódik egy újabb kör, de 2-5 esetén a
+
+második játékos győzött)
+Két szekció választható: Zsivány (5%-kal olcsóbbak számára az áruk), Titkos Idegen (rendelkezik ún.
+
+tudás adattaggal. Tudásától függően speciális csapásokat idézhet elő, lásd később).
+Minden halál után újra lehet vásárolni a Hős-Üzletből. Az előbbi kört nyerő hős ajándék 50 pénzt kap. A vesztes pedig ún. „segélyt kap”, 100 pénzegység formájában. Minden körben maximális életerővel kezdenek a harcosok. Vásárlás úgy zajlik, hogy láthatjuk a megvásárolható termékek listáját, majd
+
+ha van pénzünk, kosárba tehetjük.
+Egy szuperhős rendelkezik életerővel (ha ez fogy el, akkor a kört nyerte a másik játékos, kezdeti értéke
+
+legyen 100 életegység), sebzési erővel (fegyveres támadások esetén a sebzés mértéke az erőből számítható ki), bizonyos mennyiségű arannyal (kezdőtőkével, ez legyen, mondjuk alapból 100), védekezési értékkel + a szekció-specifikus tulajdonságokkal.
+
+A kezdeti 100 pénzt elkölthetik a hősök addig, míg (1) vagy el nem fogy a tőkéjük, (2) vagy nem kívánnak több mindent vásárolni.
+
+Példák a Hős-Üzlet kínálatából (ez szabadon bővíthető)
+- Életerő növelése. Bizonyos értékekkel növelhető lesz a karakter életereje, viszont ezek borsos árba kerülnek! Pl.: 1 egység életerő = 20 pénz
+- Sebzési erő növelése. Növelhető a sebzési erő. Ez úgy néz ki, hogy a harc folyamán lehet választani majd a „fegyverrel sebzek” opciót – ekkor az ellenfélnek [0... és a sebzési erőd közötti] véletlenszerű értéket vonsz le a párbajtársad életerejéből. Ez se olcsó mulatság, de kedvezőbb, mint az életerő vásárlása.
+- Kritikus sebzés „opció”. Egyszer használatos tulajdonság (azaz kihasználása után elvész, újat kell vásárolni). Aki ezt a mérkőzésben használja fel, a sebzési erejének 75%-át biztos sebzi az ellenfélben. Egy kritikus támadás ára kb. 55 pénz legyen. Körönként ennek is nőni fog az ára, valamint a százalékérték is, azaz a második fordulóban már 60 pénz, és 80% sebzés, harmadikban 65 pénz, és 85% sebzés, negyedikben 70 pénz és 90% sebzés stb.
+- Kör kihagyása, alvás: 5% életerő töltődik (ez mindenki számára elérhető, minden körben)
+- Képesség átvétel. Az ellenfél képességeit használhatjuk fel 1 körben.
+- Kerti-partis sütögetés: Előállíthatunk fogyasztható húst, amit később életerő-töltésre használhatunk.
+
+Tárgyak
+
+- Méreg. Ha használjuk, az ellenfelünknek körönként valamilyen kisebb sebzést kap, pl. 5 körön át. Az életerejének 9%-a kerül levonásra.
+- Orvosság- mérkőzés közben megiható, és az életerőben bizonyos értéket feltölt. (minden fordulóban egyre több életerőt adó orvosságok kaphatóak. Első fordulóban pl. 15 életerőt tölt fel az orvosság, másodjára már 25-öt, és így tovább.) Alakítsunk ki neki valamilyen árat, ami értelemszerűen körönként majd nőni fog. Egy megvásárolt orvosságot, ha elfogyasztunk, eltűnik a táskánkból. Egyszerre többet is lehet venni.
+
+Szekció-specifikus tulajdonságok:
+- Rablómaszk. Ez csak zsiványok számára elérhető. Az ellenféltől (ha nem zsivány) lehet pénzt eltulajdonítani. Maximum a pénzének 45%-át lehet elvinni. Egy maszkot egy rablásra lehet felhasználni.
+- Laboratóriumi eszközök. Növeli a tudás adattagunk, ha Titkos idegenről van szó. Elég drága luxuscikk.
+- Robbanószerkezet. A titkos idegenek számára elérhető ez, egy robbanást idézhetnek vele elő. Az idegen tudásától függ, mekkora sebzést okoz a robbanás. (pl.: alapból
+
+- Készítsünk még legalább 3 másik tulajdonságot: Pl.: aktuális körre megduplázza az erőt, elkábítás (a másik kimarad a következő körből), Szupercsapás – az ellenfelet sebezem, magam gyógyítom, időutazás (a meccs közben visszamehetek a legelejére). Ilyet mindenki legfeljebb 1x használhat, borsos áron. Pl. 100 pénz
+
+A konkrét játék pedig úgy néz ki, hogy a játékosok egyesével ülnek a számítógéphez, az kilistázza számukra a lehetőségeket (pl.: Fegyveres támadás (zárójelben megjegyezhetjük, kb. mekkora a maximális sebzés), orvosság elfogyasztása, Extra tulajdonságok stb.- csak azokat, amik elérhetőek számára) Ezekből felváltva választanak a játékosok, míg az egyikük nem halad el +3 győzelemmel a másik előtt. 1 győzelem azt jelenti, hogy az egyikük meghalt.
+
+Feladat:
+
+A fenti játék objektumorientált megvalósítása!
+
+

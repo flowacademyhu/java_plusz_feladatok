@@ -1,0 +1,55 @@
+ feladat egy egyszerű stratégia játék megvalósítása Java nyelven. A játék egy 10x10-es négyzetrács alapú pályán játszódik, ahol két játékos küzd egymás ellen, a kék és a piros. Minkét játékos rendelkezik épületekkel és különféle támadni képes egységekkel (katonákkal), amelyek a pálya egy (x,y) pontján helyezkednek el. Az a játékos nyer, amelyik az ellenfél összes épületét lerombolja.
+
+A játékosok rendelkeznek játékponttal (jp), valamint minden egység és épület rendelkezik életponttal (ép). A játékpont felhasználható épületek vagy egységek vásárlása, továbbá ha az életpont 0-ra csökken, a kérdéses egység, vagy épület megsemmisül, és eltűnik a pályáról.
+
+A játék menete
+
+Induláskor minkét játékos egy-egy főépülettel és 3-3 harcossal rendelkezik. A kék játékos esetén a főépület az (1,1) koordinátájú pozíción, a 3 harcos pedig a (3,1), (2,2) és (1,3) pozíciókon kap helyet, míg a piros játékosnál a főépület a (10,10), a harcosok a (10, 8), (9,9) és (8,10) koordinátákon vannak. A játékosok kezdetben 100-100 játékponttal rendelkeznek. A főépület és a harcos egység részletesebb leírása (életpont, ár, stb.) a későbbiekben szerepel.
+
+A játék folyamán a játékosok felváltva lépnek. Az, hogy melyik játékos kezd, sorsolással dől el a játék elején. Egy lépésben egy játékos vagy valamelyik pályán lévő egységével lép/mozog, vagy vásárol. Ha a játékos úgy dönt, hogy lép, akkor ki kell jelölnie egy pályán lévő egységet, majd meg kell adnia, hogy az melyik pozícióra kerüljön. Egy egység nem léphet nagyobbat a lépéstávolságánál, és nem léphet már foglalt mezőre sem. Vásárláskor a játékos a különféle épületek és egységek közül választhat, de egy alkalommal csak egyvalamit vehet. Minden egységnek és épületnek van ára, vásárláskor ez az ár levonásra kerül a játékos játékpontjaiból. A megvett elemet el kell helyezni a pályán, de ez csak a meglévő (saját) épületek 2 egységnyi körzetében lévő üres mezőkön lehetséges. (Egy épület 2 egységnyi körzetén az épülettel közvetlenül szomszédos mezőket, és ezen szomszédokkal szomszédos mezőket kell érteni, vagyis a 8 irányban legfeljebb 2 távolságra lévő mezőket.) Előfordulhat, hogy nincs olyan egység, amit mozgatni lehetne, vagy nincs elég játékpont a vásárláshoz. A mozgatást vagy vásárlást követően a játékos támad. A támadás során a játékos minden meglévő egysége egymást követően egyesével, egyénileg támad. Ezt a különféle egységek különféleképpen teszik meg, ennek leírása az „Egységek” részben olvasható. A támadás után a játékos 50 játékpontot kap, majd a másik játékos következik. Az a játékos nyer, amelyik az ellenfél minden épületét elpusztítja.
+
+Épületek
+
+A játékban háromféle épület szerepel: főépület, mesterlövészképző és kórház. Minden épületnek van életpontja és ára. Ha egy épület életpontja 0-ra (vagy az alá) csökken (az ellenfél támadásai miatt), eltűnik a pályáról.
+
+Főépület
+
+Kezdetben mindkét játékos rendelkezik egy ilyen épülettel, de bármikor vásárolható még egy, ha a játékos elegendő játékponttal rendelkezik. Harcos típusú egység csak akkor vásárolható, ha a játékosnak van legalább egy ilyen épülete a pályán. Ára 200 játékpont, életpontja 600.
+
+Mesterlövészképző
+
+Mesterlövész típusú egység csak akkor vásárolható, ha a játékosnak van legalább egy ilyen épülete a pályán. Ára 250 játékpont, életpontja 400.
+
+Kórház
+
+Ha a játékos rendelkezik ilyen épülettel, minden saját támadást követően az összes egységének és épületének életpontja nő. Általánosan az érvényes, hogy n db kórház megléte esetén minden egység és épület életpontja n*10 életponttal nő, de egy játékelem életpontja sem nőhet a megadott, maximális életpont fölé. Ára 150 játékpont, életpontja 100.
+
+Egységek
+
+A játékban kétféle egység szerepelhet: harcos és mesterlövész. Minden egységnek van életpontja, ára és
+
+lépéstávolsága, továbbá minden egység tud támadni. Az egységek a lépéstávolságuknál nem mozdulhatnak nagyobbat a pályán egy lépés alkalmával. Ha például a lépéstávolság 2, akkor mind a 8 irányban legfeljebb 2 mezőnyi távolságot mozdulhatnak el aktuális pozíciójukhoz képest, ha a lépéstávolság 1, csak a közvetlenül szomszédos mezőkre léphetnek, távolabb nem. Ha az egység életpontja 0-ra (vagy az alá) csökken, meghal és eltűnik a pályáról.
+
+Harcos
+
+Csak akkor vásárolható ilyen egység, ha a játékos rendelkezik legalább egy főépülettel a pályán. Ára 40 játékpont, életpontja 50, lépéstávolsága 2. Egy harcos egység támadása abban nyilvánul meg, hogy minden az aktuális pozíciójával szomszédos mezőn lévő ellenséges egység, vagy épület életpontját 20- szal csökkenti.
+
+Mesterlövész
+
+Csak akkor vásárolható ilyen egység, ha a játékos rendelkezik legalább egy mesterlövészképző épülettel a pályán. Ára 60 játékpont, életpontja 30, lépéstávolsága 1. Egy mesterlövész egy támadás alkalmával egy lövést ad le egy ellenséges egységre vagy épületre, hogy melyikre, azt a játékosnak kell megadnia minden mesterlövész minden támadása alkalmával. A meglőtt elem vagy épület életpontja 45-tel csökken. Egy mesterlövész lőtávolsága 4 egység, azaz az aktuális pozíciójától (mind a 8 irányban) legfeljebb 4 mező távolságra lévő ellenséget tudja eltalálni, ennél messzebbre nem lő el.
+
+Megjegyzések
+
+  Mind a konzolos, mind a grafikus megvalósítás elfogadott, de minkét esetben ügyeljünk arra, hogy a felhasználó minden szükséges információt megtudhasson, amire a játék folyamán szüksége lehet: életpontok, játékpontok, épületek és egységek pozíciója, a pályát és a rajta szereplő elemeket mindenképpen jelenítsük meg.
+
+  Ügyeljünk arra is, hogy a felhasználót mindig tájékoztassuk, hogy mit kell tennie a játék használatához: milyen inputot kell megadni, azt milyen formában, stb.
+
+  Igyekezzünk a lehető legtöbb hibát, hibás inputot kezelni. Például ne legyen probléma, ha a program számot vár, és szöveget adunk meg neki.
+
+  Tartsukszemelőttakötelezőprogramkövetelményeitésapontozásmikéntjét.
+
+  A programozás előtt gondoljuk át, milyen osztályokat hozunk létre, azoknak milyen kapcsolatai
+
+vannak, melyik lehetne speciális esete a másiknak, mik a közös viselkedések, stb.
+
+

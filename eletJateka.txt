@@ -1,0 +1,61 @@
+z élet játéka” egy kártyajáték, amit 2-4 játékos játszhat. Összesen 96 db kártyából áll a pakli, a kártyák pedig 4 csoportba sorolhatók: Család, Karrier, Vagyon, Kaland. Ezeket a kártyákat a játék kezdete előtt szét kell válogatni, így 4 pakli lesz. Minden kártyán rajta van, hogy hány pontot ér, a játék célja pedig minél több pontot összegyűjteni a játékidő lejártáig. A kártya pontszámát akkor szerzi meg a játékos, ha a kártyát az élettörténetének a részévé teszi (vagyis felhasználja). Minden felhasznált kártya lekerül felfelé fordítva a játékos elé az asztalra.
+
+A kártyák legtöbbje bármikor felhasználható, de vannak speciális kártyák is:
+o “10 év eltelt” feliratú kártya: az idő mérésére használjuk, mind a 4 pakliban 2-2 db van
+
+belőle, a játék pedig addig tart, amíg a játékosok ki nem húznak 6 ilyet, vagyis 60 évig
+o előfeltételes kártya: ahhoz, hogy ezt a kártyát valaki felhasználja, meg kell lennie a megfelelő előfeltételnek az élettörténetében (pl. “Ikrek születése” kártyát csak akkor használhat egy játékos, ha az élettörténetében van már “Esküvő” kártya). Az előfeltételt
+
+egy kis piros szimbólum jelzi a kártya jobb felső sarkában.
+o “Per” kártya: ennek a felhasználásával beperelhetünk egy tetszőleges másik játékost,
+
+ami azt jelenti, hogy neki át kell adnia egy (előfeltétel nélküli) kártyát az élettörténetéből, ami a mi élettörténetünkbe kerül (olyan típusú kártyát kell adnia, amilyen típusú a per kártya, tehát pl. Kaland típusú per kártyával Kaland típusú eseményt vehetünk el az életéből). Maga a “Per” kártya 0 pontot ér.
+
+o “Esküvő” és “Útlevél” kártyákból mindenkinek az élettörténetében maximum 1-1 szerepelhet
+
+A kártyák: (4x24 db)
+
+o Családkártyák:7db“Esküvő”,5db“Háziállat”,2db“10éveltelt”,2db“Per”
+o előfeltételes Család (előfeltétel az “Esküvő”): “Aranylakodalom”, “Gyémántlakodalom”, 2
+
+db “Kisfiú születése”, 2 db “Kislány születése”, “Ikerlányok”, “Hármasikrek”
+
+o Karrier kártyák: 4 db “Diploma”, “Fagyiárus”, “Kaszkadőr”, “Takarító”, “Teniszező”, “Rocksztár”, 2 db “10 év eltelt”, 2 db “Per”
+
+o előfeltételeskártyák(előfeltétela“Diploma”):“Orvos”,“Tanár”,“Kutató”,“Rakétatervező”, “Politikus”, “Színész”, 5 db “Előléptetés”
+
+o Vagyon kártyák: 2 db “Autó”, 8 db “Ház”, 1 db “Hajó”, 5 db “Útlevél”, 2 db “10 év eltelt”, 2 db “Per”
+
+o előfeltételesVagyonkártyák(előfeltétela“Ház”):3db“Házátalakítás”,1db“Házfelújítás”
+
+o Kaland kártyák: 3 db “Színház”, “Dobolás”, 2 db “Hegyi túra”, “Lottó”, 3 db “Mozi”, 2 db “10 év eltelt”, 2 db “Per”
+
+o előfeltételesKalandkártyák:
+
+  előfeltétel az “Autó”: 2 db “Autós kirándulás”, “Autóverseny”
+
+  előfeltétel a “Hajó”: “Hajós kirándulás”
+ előfeltétel az “Útlevél”: “Tánc a riói karneválon”, “Utazás a Holdra”, 3 db
+
+“Tengerparti nyaralás”, “Kirándulás a dzsungelben”
+
+A játék menete:
+
+A játékosok kezdetben 5-5 lapot húznak, tetszőleges pakliból, majd elkezdődik a játék, ami a következőképpen zajlik:
+
+o a soron következő játékos, ha tud, akkor letesz az asztalra egy kártyát, ami így része lesz az ő élettörténetének
+
+o ha a soron következő játékosnak nincs olyan kártyája, amit le tudna tenni, akkor egy tetszőlegeset eldobhat (ezt többé már nem használhatja senki), és húzhat bármelyik pakliból egy újat
+
+o ha le tudott tenni egy kártyát az életéhez, akkor húzhat egy újat bármelyik pakliból (minden játékos kezében mindig 5 kártyának kell lennie)
+
+o ha “10 év eltelt” kártyát húz egy játékos, azt azonnal középre teszi, és húz helyette másikat
+
+o a “Per” kártyát akkor érdemes használni, ha a másik játékos élettörténetéből van mit elvenni (mivel az élettörténetet alkotó kártyák felfelé vannak fordítva, így a játékos mindig el tudja dönteni, hogy van-e olyan dolog, amit elperelhet)
+
+Amikor a hatodik “10 év eltelt” kártya is középre került, akkor vége van a játéknak. A játékosok ekkor összeszámolják a pontjaikat. Fontos, hogy csak azoknak a kártyáknak a pontja számít, amik a játékos élettörténetének részei (a kézben levő kártyák pontszáma nem). Az nyer, aki a legtöbb pontot gyűjtötte.
+
+Feladat:
+
+A feladat “Az élet játéka” kártyajáték objektumorientált megvalósítása! A játék állása minden körben legyen nyomon követhető, a következő játékostól kérjük be a kívánt lépést, a szabályok betartása legyen ellenőrizve.
+Az egyes kártyák értéke (a “Per” kártyák kivételével), szabadon választható. Ugyanakkor feltétel, hogy a kártyáknak fix értéke legyen, tehát ne változzon egyik játékról a másikra, valamint 10 és 80 közötti érték legyen!

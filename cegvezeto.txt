@@ -1,0 +1,24 @@
+ játék egyszemélyes, egy kisebb, virtuális céget kell benne vezetni. A játék körökre van osztva (egy kör, egy hónapot fog jelenteni). Minden körben tetszőleges intézkedést rendelhetünk el a cégünkön.
+
+A cég egy tetszőleges (hallgató által meghatározható) terméket készít el és forgalmaz. Olyan terméket válasszunk, amiket apróbb részekre (nyersanyagokra) oszthatunk. Pl.:lakás-berendezési tárgyakat, ahol szükséges az összeszerelésükhöz fát, üveget beszerezni stb... Majd ezekből építhetjük össze a késztermékeket.
+
+A cég kezdőtőkéje 1 000 000 Ft. A játéknak akkor van vége, ha az 2 000 000 forintos tőkét elértük. Jelenleg felteszem, hogy bútorokat készítő- és árusító céget vezetünk.
+Egy kör egy hónapot jelent, a körök számát jegyezzük fel. Tároljuk el, havonta mennyi termék készül el.
+
+Ezekből mi rendelkezhetünk, hogy mennyit bocsátunk árusításra. Kezdetben a termelékenység 0 egység bútor legyen. A későbbiekben a termelékenység úgy alakul, hogy egy dolgozó havonta 30 egységnyi bútort készít el.
+
+Nekünk kell gondoskodnunk az összes cégen belül zajló folyamatról. Minden körben lehetőségünk legyen a következő lépésekre:
+- Nyersanyag vásárlása. Megadható, hogy mennyi egység nyersanyagot vásárolunk. Legyen legalább kétféle nyersanyag, valamilyen megadott árral. (pl. megadható, hogy X mennyiség nyersanyagot vásárlunk). A nyersanyag bekerül a raktárunkba, a pénz levonásra kerül (arányosan mennyiségtől függően fizetünk).
+
+- Árucikk elkészítésének indítása. Megadjuk, mennyi árucikket szeretnénk gyártani. Legyen megadva valamilyen árucikk/nyersanyag, hogy egy árucikk elkészítése mennyi nyersanyagot fogyaszt el. A következő hónapra elkészül a kívánt árucikk-mennyiség (ha volt elég anyag a raktárban). Nyilván szükséges munkaerő is a folyamat elvégzéséhez. (vizsgálatra kerül, hogy a kért mennyiséget elő tudják-e állítani az alkalmazottak)
+
+- Új alkalmazott felvétele/kirúgása. Ez havonta 50 000 Ft-ös költséget jelent, amit minden hónapban levonunk (amíg foglalkoztatjuk). Viszont ha új alkalmazottat veszünk fel, a termelékenység megnő 30 egység bútorral.
+- Árucikk küldése eladásra. A raktárból kikerül az árucikk mennyiség, amennyit megadtunk. Minden hónapra legyen egy VÉLETLENSZERŰ szám 0..1 között, ami az eladási arányt mutatja. Ha egy x. körben eladásra szánunk 500 terméket, és a véletlenszerű eladási arány: 50%, akkor a árucikkek 50%-át tudjuk eladni. (azaz 250-et). A következő hónapra megkapjuk az eladásból származó pénzösszeget. (az eladási árat is meghatározhatjuk, ez legfeljebb az egy termék elkészítéséi árának 250%-a lehet.) Ha egy bútort 6700 Ft-ból állítottunk elő, akkor ezt legfeljebb 16 750 Ft-ért próbálhatjuk eladni.
+
+- Reklám kérése/elvetése. Minél több reklámot kértünk a cégünkhöz, annál több árut tudunk eladni (pl. 5%-kal növeli a körönkénti véletlenszerű eladási arányt, addig, míg 100%-hoz érünk.). A reklám havonta pénzbe kerül. Ez minden hónapban automatikusan levonásra kerül. (ahány reklám, annyiszor kell a reklám-díjat levonni)
+
+- Lépés a következő hónapra. Minden változtatás végrehajtódik a következő hónapra. Jelezzük ki a hónap váltásakor, mennyi bútor készült el/ mennyi volt a bevétel / kiadás, aktuális egyenleg stb. Valamint ilyenkor készülnek el a feldolgozásra kiadott bútorok, ekkor adódnak el a termékek, automatikusan levonásra kerülnek a bérek, a reklámokért kifizetendő összegek.
+
+Egyéb lehetőségek: Hitel kérelme, valamint saját ötletből származó funkció hozzáadása. Feladat:
+
+A fenti játék objektumorientált megvalósítása!

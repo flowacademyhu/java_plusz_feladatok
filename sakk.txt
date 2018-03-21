@@ -1,0 +1,29 @@
+ feladat hasonlít a jól ismert sakk játékhoz, ezen információk megtalálhatóak a következő linken: http://hu.wikipedia.org/wiki/Sakk.
+
+  Az eltérés a következő:
+◦ A tábla 14x14-es méretű
+◦ Mindkét játékos kezdéskor választhat, hogy melyik figurának legyen szuperereje:
+
+▪  Gyalog esetén ez azt jelentené, hogy egy kitüntetett gyalog képes 2-t ütni, azaz ha átlósan áll előtte 2 bábu, akkor azokat egy lépéssel le tudja ütni
+
+▪  Huszár esetén ez azt jelentené, hogy meg lehet duplázni a L lépés méretét, azaz vízszintesen 4-et, majd függőlegesen 2-t léphet. Itt is csak 1 bábura vontakozik a szupererő.
+
+▪  Bástya esetén pedig egy bástya képes “vizesárkot” építeni a bábuk elé, a lépése feléig. Azaz ha lép egy irányban 6-ot, akkor 3 mezőt fog átalakítani vizesárokká. Ez azt jelenti, hogy ha az ellenfél bábuja belelép, akkor a következő körben kimarad. Meglévő bábun is áthúzható a vízesárok, értve ezalatt, hogy ha az útban áll egy vagy több elenséges bábu, akkor dönthetünk, hogy leütjük és megállunk, vagy továbbmegyünk és vizesárkot ásunk alá.
+
+▪  Futó esetén lépés közbeni irányváltoztatásra van lehetőségünk, majd az irányváltoztatás után a futó újra léphet. Itt is csak 1 bábura vonatkozik a szupererő.
+
+▪  Vezér esetén a vezér képes egy már elhunyt (leütött) bábut feléleszteni és ezt a leütés helyén teheti csak meg, azaz ha a halott bábu mellé ér, akkor felélesztheti arra a mezőre amelyen leütötték azt.
+
+▪  Király esetén pedig a bábuval lehet lóugrásban mozogni. ◦ Ezeken kívül a következők változtak:
+
+▪  Induláskor a táblán random előfordulással (persze nem oda ahol a bábuk vannak) el kell helyezni akadályokat, pontosan 8-at, mely mezőkre nem lehet lépni
+
+▪  Ha egy gyaloggal átérünk az ellenfél felére, akkor pedig azon felül, hogy becserélhetjük egy leütött bábura, választhatunk az ellenfél egy bábuja közül amelyet a pályán akárhová elhelyezhetünk.
+
+▪  A királyt is le lehet ütni, ha 2 bábuval adunk sakkot, illetve ha vizesárokban áll, akkor leüthetjük akármilyen bábuval.
+
+▪  A játékot az veszíti el akinek csak 1 bábuja marad a táblán.  Feladat:
+
+ A fenti játék objektum orientált megvalósítás! A játék során fontos hogy az alap lépések működjönek, azaz ami a sakkban is működik. A különleges lépéseket nem kell megvalósítani. (pl. sáncolás).
+
+

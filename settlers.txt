@@ -1,0 +1,63 @@
+ játék alapvetően a népszerű Settlers stratégiai játékhoz hasonlít. A játékot 2-4 játékos játszhatja, egymást felváltva, körökre osztva.
+
+A játék egy 100x100-as táblán játszódik.
+
+Kezdetben minden játékos kijelöli a városának középpontját (Városháza), amit egy 11x11-es terület vesz körbe, ez a városának a határa. Minden város városházája között lenni kell legalább 30 egységnek, ezt minden új város telepítésénél ellenőrizni kell.
+
+Minden város kezdetben rendelkezik 1000 arannyal.
+
+Minden város populációja kezdetben 500 és 1000 fő közötti véletlen szám.
+
+A Városházán 2000 embert lehet elszállásolni.
+
+Minden körben a város minden lakosa 0,1 értékű aranyat szolgáltat be adóként. Ha ez az összeg nem egész, akkor kerekítsünk lefele.
+
+Minden körben az adott város populációjának 0-9% meghal. Minden körben az adott város populációja 0-15%-al gyarapszik.
+
+Minden körben a játékosnak 3 tevékenység pontja van, melyeket az alábbiak szerint lehet felhasználni:
+
+Épületépítés: 2 pont
+
+50 darab katonatoborzás: 2 pont
+
+Hadsereg maximum 10 egységgel való arrébb mozgatása: 1 pont
+
+Építhető épületek:
+
+Fegyverkovács műhely, ára 300 arany.
+
+Kaszárnya, ára 200 arany. Ennek segítségével lehet katonákat toborozni. Előfeltétele, hogy a város rendelkezzen már Fegyverkovács műhellyel.
+
+Kiképző hely, ára 400 arany. Ennek segítségével a katonák ereje duplájára nő. Előfeltétel a Fegyverkovács műhely és a Kaszárnya.
+
+Bank, ára 700 arany. Segítségével az egy körben befolyó arany mennyiség + 20%-al megnő.
+
+Szállás, ára 100 arany. 2000 embert lehet benne elszállásolni.
+
+Katonaszállás, ára 150 arany. 100 katonát lehet benne elszállásolni.
+
+Az építkezés úgy történik, hogy a városon belül ki kell jelölni egy pontot, ahová az épületet építeni kívánjuk. Másik épületre nem lehet ráépíteni.
+
+Kötelező Szállást építeni, ha nincs több hely a városlakóknak. Ha ezt nem tudja a játékos teljesíteni (nincs elég aranya, vagy nincs több építési hely), akkor 1000 ember elhagyja a várost.
+
+50 darab katona toborzásának feltételi:
+
+Legyen a játékosnak legalább 100 aranya
+
+Legyen legalább 50 db civil lakos
+
+El lehessen szállásolni a katonákat Katonaszálláson
+
+A katonákat hadseregekbe lehet szervezni. Egy játékosnak több hadserege is lehet. A hadseregbe lévő katonák helyei felszabadulnak a Katonaszállásokon. A hadseregeknek a városon kívül kell elhelyezkedniük. A hadseregbe tartozó katonák nem vehetnek részt a város védelmében. A hadsereg mozgatása 1 pontért, maximum 10 egységgel csak vízszintes vagy függőleges irányba történhet.
+
+Harc akkor történik, ha egy játékos egyik hadserege egy másik játékos városhatárához ér. Ilyen esetben a játékosok felváltva dobnak egy kockával (véletlen szám 1 és 6 között). Az a játékos nyeri az aktuális dobást, amelyik nagyobbat dobott. Ha a védekező játékos dobott nagyobbat, akkor a támadó játékos katonáinak [védekező játékos dobott értéke * 5]%-a meghal. Ha a támadó játékos katonáinak száma kevesebb, mint 20 és kisebbet dobott, mint a védekező, akkor az egész hadserege elpusztul. Ha a támadó dobott nagyobbat, akkor a védekező játékos katonáinak [támadó játékos dobott értéke * 3]%-a meghal. Ha a védekező játékos katonáinak száma kevesebb, mint 20 és kisebbet dobott, mint a támadó, akkor az egész városa elpusztul. Ha a támadó nyer, akkor a védekező játékos kiesett és a támadó megkapja az összes aranyát.
+
+A játék addig tart, amíg csak 1 játékos marad.
+
+Feladat:
+
+A fenti játék objektumorientált megvalósítása!
+
+A program jelenítse meg mindig az aktuális játékos városát és adjon információt a lakosságról, aranya mennyiségéről, stb. Kérésre az egész térképet is meg lehessen jeleníteni (hadsereg mozgatásánál fontos).
+
+Nem feltétel a grafikus megjelenítés.

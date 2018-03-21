@@ -1,0 +1,36 @@
+ feladat egy egyszerű stratégiai játék megvalósítása Java nyelven. A játékot egy játékos és „x” gépi játékos játssza, egy tetszőleges méretű pályán amely, „y” mezőből áll („x” minimum 1, maximum 4 lehet). Minél több játékos játssza a játékot, annál több mezőből érdemes felépíteni a játékteret. A mezők lehetnek rendezettek is, de rendezetlenek is.
+
+A pálya tartalmazhat semleges területeket, amelyek nem tartoznak egy játékoshoz sem, és nem lehet őket elfoglalni. A pálya formája tetszőleges lehet. Kezdetben minden játékos egyenlő számú mezővel rendelkezik, amelyek véletlenszerűen kerülnek kiosztásra.
+
+A mezőkön dobókockák helyezkednek el, minden mezőn minden esetben van legalább 1, maximum pedig 8 dobókocka. A játék indulásakor minden játékos háromszor annyi dobókockát kap, mint amennyi területe van (ha például 6 területtel kezd minden játékos, akkor 3*6 dobókockát kap mindenki). A dobókockákat a területek között véletlenszerűen kell kiosztani, viszont fontos, hogy minden területen legyen minimum 1 dobókocka.
+
+Miután megtörtént a pálya inicializálása, tehát minden játékos megkapta a területeit és a dobókockáit, elkezdődik a harc. Minden játékos a megadott sorrendben követi egymást, egyszerre csak egy játékos cselekszik. A cél az, hogy minden területet elfoglaljunk. Egy területet úgy lehet elfoglalni, hogy megtámadjuk egy mellette lévő mezővel. Csak olyan mezőről támadhatunk, amelyen legalább két dobókocka áll. Hiszen, ha elfoglaljuk az ellenség területét, a saját mezőn is maradnia kell egy dobókockának, ill. az ellenféltől elnyert területre is tennünk kell legalább egy dobókockát.
+
+A harc kimenetele a következőképpen alakul: mindkét játékos a védekező és a támadó is annyi dobókockával dob, amennyi dobókocka az adott mezőn áll (ha pl. valaki 5 dobókockával dob, akkor a legnagyobb érték 5*6 = 30 lehet, amíg, ha az ellenfél pl. csak 1 dobókockával dob, akkor a legnagyobb érték, amit dobhat, az 6). A harcot az nyeri, aki nagyobb számot dob. A dobást egy véletlen szám generálással szimuláljuk.
+
+Ha a támadó nyer, a védekező elveszíti az összes dobókockáját, ami a területen volt, a támadó összes dobókockája az elnyert mezőre vándorol, kivéve egyet, amelyet az eredeti mezőn hagy.
+
+Ha a védekező nyer, a támadó elveszíti az összes dobókockáját kivéve egyet, amely a támadó mezőn marad.
+
+Amennyiben mindkét fél ugyanakkorát dobott, az esetben a védekező játékos nyer. (lásd előző pont)
+
+Egy körben egy játékos annyiszor támadhat, amennyiszer akar, tetszőleges mezőkről. Amikor egy játékos már nem akar tovább támadni, átadhatja a kört a soron következő játékosnak. Amikor valaki a
+
+kör átadást választja, akkor a területei után „k” darab dobókockát kap
+( k = birtokolt területek száma / 2 ) . Ezeket a plusz dobókockákat véletlenszerűen kell szétosztani a játékos által birtokolt területek között. Miután ez megtörtént, a következő játékos jön.
+
+Amennyiben egy játékosnak nincsen több területe kiesett a játékból. A játékot az a játékos nyeri, aki utoljára marad, és birtokolja az összes mezőt.
+
+A játék egy flash alapú megvalósítása: http://www.gamedesign.jp/flash/dice/dice.html.
+
+Megjegyzések
+
+  Mind a konzolos, mind a grafikus megvalósítás elfogadott, de minkét esetben ügyeljünk arra, hogy a felhasználó minden szükséges információt megtudhasson, amire a játék folyamán szüksége lehet: életpontok, játékpontok, épületek és egységek pozíciója, a pályát és a rajta szereplő elemeket mindenképpen jelenítsük meg.
+
+  Ügyeljünk arra is, hogy a felhasználót mindig tájékoztassuk, hogy mit kell tennie a játék használatához: milyen inputot kell megadni, azt milyen formában, stb.
+
+  Igyekezzünk a lehető legtöbb hibát, hibás inputot kezelni. Például ne legyen probléma, ha a program számot vár, és szöveget adunk meg neki.
+
+  Tartsuk szem előtt a kötelező program követelményeit és a pontozás mikéntjét.
+
+  A programozás előtt gondoljuk át, milyen osztályokat hozunk létre, azoknak milyen kapcsolatai vannak, melyik lehetne speciális esete a másiknak, mik a közös viselkedések, stb.

@@ -1,0 +1,52 @@
+ feladat a Candy Crush játék egy egyszerűsített változatának megvalósítása Java nyelven. A játék egy tetszőleges méretű négyzet alakú táblán zajlik, amelyen különböző színű cukrok vannak elhelyezve.
+
+A játék célja
+
+A játékos célja, hogy meghatározott lépésszám mellett minél több pontot szerezzen azáltal, hogy azonos színű cukrokat egymás mellé helyezve „megeszi” őket.
+
+A játék menete
+
+A játék elindításához először a játékos megadja, hogy mekkora méretű táblán szeretne játszani, valamint, hogy milyen nehézséget választ. Könnyű játék esetén 40 lépés, közepes játék esetén 30 lépés nehéz játék esetén pedig 20 lépés áll rendelkezésre a pontok gyűjtéséhez.
+
+Ezt követően legenerálódik a kiválasztott méretű tábla, melynek mezőin a következő típusú cukrok lehetnek:
+
+Sima Cukor: Egyszerű cukor különleges tulajdonságok nélkül. Gyakorisága: 70%.
+
+Vízszintes Cukorfaló: Olyan cukor, amellyel, amikor megesszük a sorában lévő összes cukrot is megesszük. Gyakorisága: 10%.
+
+Függőleges Cukorfaló: Olyan cukor, amellyel, amikor megesszük az oszlopában lévő összes cukrot is megesszük. Gyakorisága: 10%.
+
+Szomszédos Cukorfaló: Olyan cukor, amellyel, amikor megesszük a vele szomszédos (tőle jobbra, balra, lefelé, felfelé illetve átlósan 4 irányban lévő) összes cukrot is megesszük. Gyakorisága: 10%.
+
+Az összes típusú cukor színe lehet kék, zöld vagy piros (egyaránt 33% gyakorisággal). A tábla a cukrok gyakoriságát figyelembe véve véletlenszerűen töltődik fel a különböző típusú és színű cukrokkal. Tehát például kék színű Sima Cukor a tábla mezőinek 0,7*0,33=0,231=23,1%-án fordul elő, piros színű Szomszédos Cukorfaló pedig a tábla mezőinek 0,1*0,33=0,033=3,3%-án fordul elő. (Ezen valószínűségek teljesülését véletlenszámok generálásával kell biztosítani.)
+
+A tábla legenerálását követően a játékos elkezdheti megenni a táblán lévő cukrokat. Ehhez minden lépéssel fel kell cserélnie két vízszintesen vagy függőlegesen szomszédos cukrot olyan módon, hogy a lépés eredményeként legalább az egyik cukrot (de akár mind a kettőt is) megegye. (Tehát nem engedélyezett olyan lépés, amelynek eredményekét nem lehet cukrot megenni.)
+
+A nehézségi szintnek megfelelő lépésszám után a játék véget ér. A játékos akkor nyer, ha legalább 800 pontot sikerült elérni, különben veszít.
+
+A játék végén lehetőség van új játékot kezdeni (újra meg kell adni a tábla méretet és a nehézségi szintet), vagy kilépni a játékból.
+
+Cukrok megevése
+
+Egy adott pozícióban lévő cukrot akkor eszik meg a játékos, ha annak „közelében” őt is beleértve legalább 3 azonos színű cukor található. A „közelében” itt azt jelenti, hogy tőle 4 irányban (jobbra, balra, lefelé illetve felfelé) haladva összeszámoljuk a vele azonos színű cukrokat addig, amíg különböző színűt nem találunk, és a 4 irányban megtalált azonos színű cukrok számát összeadjuk.
+
+Amennyiben van legalább 3 azonos színű cukor, akkor az összes megtalált ilyen színű cukrot megeszi a játékos. Ezáltal ezek a cukrok eltűnnek a pályáról és a felettük lévő cukrok lentebb esnek egészen addig, hogy a tábla minden mezőjében legyen egy cukor. Ehhez a tábla első sorában folyamatosan új cukrok jelennek meg, melyek típusa és színe a fentebb leírt valószínűségek alapján véletlenszerűen generálódik.
+
+Természetesen, ha a megevett cukrok között van speciális cukor, akkor annak megfelelően egyéb cukrokat is megesz a játékos, tehát el kell tüntetni őket a tábláról. Például, ha van egy Függőleges Cukorfaló, akkor az adott oszlopból minden cukor eltűnik, és ugyanennyi új cukor esik le fentről, továbbá, ha az adott oszlopban volt másik speciális cukor, akkor annak a hatása is érvényesül.
+
+Pontozás
+Minden megevett cukorért pontot kap a játékos a következők szerint:
+
+Sima Cukor: 10 pont
+
+Vízszintes Cukorfaló: 50 pont
+
+Függőleges Cukorfaló: 50 pont
+
+Szomszédos Cukorfaló: 60 pont
+
+Természetesen ez azt jelenti, hogy ha a játékos megesz például egy Függőleges Cukorfalót, akkor kap ezért 50 pontot, majd az oszlopban megevett összes többi cukorért is megkapja a neki járó pontszámot (például egy így megevett Vízszintes Cukorfalóért 50 pontot kap).
+
+A játék során eddig szerzett pontokat mindig jelenítse meg a program.
+
+

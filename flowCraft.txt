@@ -1,0 +1,124 @@
+ játék hasonlít a népszerű warcraft 3 játékhoz, annyiban különbözik, hogy a csata maximum 2 ember közt zajlik, illetve körökre osztott játékról beszélünk.
+
+  A következő fajok közül lehet választani: Human, Night Elf, Orc, Goblin
+
+  A fajok speciális képességei a következőek:
+
+Human: 25%-al olcsóbban vásárol mindent.
+
+Night Elf: 25% esélye van arra, hogy 2x léphet minden egységgel
+
+Orc: Bloodlust (7 körönként 1x lehet aktiválni, 25%-al többet sebez minden
+
+egységre illetve épületre)
+
+Goblin: 10%-al több pénzt kap körönként
+
+  A játék menete egy 40x40-es táblán zajlik. A bal alsó és a jobb felső sarokból indulnak a játékosok.
+
+  Az egységek katapult kivételével egyet mozoghatnak egyszerre, a katapult 3-at, a hős 2-t. Minden játékos mozoghat vagy helyben is maradhat egy kör alatt.
+
+  Minden játékos kezdetben 200 arannyal kezd és minden kör végén alap esetben még 50-et kap.
+
+  A játékosok a következő épületet építhetik (minden körben egy épület és maximum 5 ember vásárolható):
+
+Town Hall (100 arany): Megépítése után elérhetővé válnak a bank és farm
+
+épületek.
+
+Barrack(75 arany): Vásárolhatunk belőle egységeket
+
+Farm(50 arany): Alap esetben csak 10 egységünk lehet egyszerre, ha építünk egy
+
+farmot akkor ez a szám 5-el növekszik.
+
+Bank(150 arany): Naponta 25 arany-al többet kapunk, ebből maximum 2 építhető.
+
+Tower(40 arany): Az épületein köre építve minden körben sebzi a környező
+
+egységeket (környező egység alatt kell érteni a 2 távolságra lévő egységeket).
+
+  Ha a játékos épített egy Barrack-ot, akkor vásárolhat egységeket, mégpedig a
+
+következőket:
+
+Harcos (25): Közelharc esetén a gyógyítókat és a távolharcosokat kétszeresen
+
+támadja.
+
+Távolharcos (15): 2 lépésről 50%-os támadást kap minden épületre illetve
+
+egységre, viszont közelharc esetén (ha valaki a szomszédos mezőn áll), 50%-al
+
+kevesebbet támad.
+
+Gyógyító (40): Körönként egyszer bármely táblán szereplő harcost távolságtól
+
+függetlenül gyógyíthat, mégpedig a hiányzó életerő felével. Pl:
+▪ Ha a harcos életerejéből hiányzik 50, akkor 25-öt gyógyíthat rajta, ha hiányzik
+
+100, akkor 50-et és így tovább.
+
+Katapult (75): Épületek támadására kiváló
+
+  Minden játékos kezdetben egy hőssel kezd, ez a hős fajonként más más tulajdonsággal rendelkezik:
+◦ Orc: A körülötte álló katonák +10% sebzést kapnak
+◦ Human: A körülötte álló katonák +20% sebzést kapnak épületek ellen
+
+◦ Night Elf: A körülötte álló katonák mindegyikét gyógyítani tudja az életük 20%-al
+
+◦ Goblin: A körülötte álló katonák közül kettőt 20 távolságra tudja hajítani a pályán
+
+◦ Ezen felül persze a hőssel is lehet harcolni
+ Az egységek élet illetve támadó pontjai a következőképp alakulnak:
+
+Harcos:
+▪ Élet: 500
+
+▪ Támadás: 50
+
+Távolharcos:
+
+▪ Élet: 250
+
+▪ Támadás: 75
+
+Gyógyító:
+
+▪  Élet: 150
+
+▪  Támadás: Ha nem szeretnénk az egységeinket gyógyítani, akkor támadhatunk
+
+vele is 4 távolságra maximum, de csak 35 sebzéssel. Ebben az esetben nem
+
+számít az hogy milyen távolságban taláható az ellenfél.
+
+Katapult:
+
+▪  Élet: 750
+
+▪  Támadás: 2 távolságra lévő épületet támad 150 sebzéssel, egységek ellen
+
+hatástalan  Épületek:
+
+Bank
+▪ Élet: 1500
+
+Town Hall
+▪ Élet: 4500
+▪ Sebez minden közeli támadót a felvértezett tüskék miatt 15-el
+
+Farm
+▪ Élet: 500
+
+Barrack
+▪ Élet: 2500
+
+Tower
+▪ Élet: 1000
+
+Feladat:
+
+A fenti játék obkemtum orientált megvalósítása!
+
+

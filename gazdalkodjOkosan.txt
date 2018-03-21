@@ -1,0 +1,42 @@
+ feladat egy gazdálkodj okosan(-szerű) társasjáték-program megírása JAVA nyelven. A cél az, hogy az adott játékos vegyen először lakást, és rendezze is be. Ehhez egy pályán kell körbe-körbe haladni. A játékos minden körben fizetést kap és ebből vásárolhat magának az árucikkekből (lásd később).
+
+A pályát a program az előre megadott mezőkből véletlenszerűen állítsa össze! A startmezőn és az ingatlanközvetítőn kívül a többi mező ismétlődhet is (de mindből legyen legalább egy). Minden játékos a startmezőről indul, és annyit lép, amennyit dob a kockával (1-6-ig), majd végrehajtja az adott mezőn olvasható utasítást.
+
+A játékosok minden, a pályán megtett teljes kör után (a startmezőn áthaladva) fizetést kapnak. Ennek összege, ha áthaladnak a startmezőn, 4.000 Ft, ha megállnak rajta, 6.000.
+A játékos kölcsönt is vehet fel az OTP-től, ha a megfelelő mezőre lép. A tartozása 2%-át minden körben levonja a bank a fizetéséből. A megfelelő mezőn megállva lehetősége van törleszteni is a tartozását (esetleg csak egy részét).
+
+Amíg a játékos nem rendelkezik lakással, minden körben 500 Ft-ot ki kell fizetnie albérletre.
+A játékos köthet biztosítást a meglévő vagyontárgyaira. Ez a megkötéskor 100 Ft-ba kerül, majd minden egyes körben is ennyibe, melyet a fizetéséből vonnak le. Dönthet úgy is, hogy nem fizeti be az aktuális részletet, ekkor megszűnik a biztosítása.
+A berendezési tárgyak természetesen csak akkor vásárolhatóak meg, ha a játékos már rendelkezik lakással.
+Az a játékos nyer, amelyik először rendelkezik teljesen berendezett lakással úgy, hogy tartozása sincs.
+
+A pálya mezői:
+
+- Startmező. Ha ezen áthaladsz, 4.000 Ft-ot kapsz fizetésként, ha megállsz rajta, 6.000-et. - Ingatlanközvetítő, itt vehetsz lakást, ára: 50.000 Ft.
+- Ingatlanközvetítő, itt vehetsz lakást, ára: 60.000 Ft.
+- Villamossal utazol, még egyszer dobhatsz.
+
+- Szemeteltél, megbüntettek 200 Ft-ra.
+- Nyaralsz, két körből kimaradsz.
+- Biztosító: itt köthetsz biztosítást (ha még nincs).
+- Bútorbolt, itt vásárolhatsz bútorokat.
+- Elektronikai cikkek boltja, itt vásárolhatsz műszaki cikkeket.
+- Kigyulladt a tévéd (ha volt). Ha van biztosításod, visszakapod az árát.
+- Lottóztál, fizess 50 Ft-ot, és húzz egy szerencsekártyát!
+- Elromlott a mosógéped (ha volt). Ha van biztosításod, visszakapod az árát. - Kéményseprőt láttál, húzz szerencsekártyát!
+- OTP. Itt vehetsz fel hitelt, vagy törlesztheted a meglévő tartozásodat.
+
+- Kanapé 5.000 Ft
+- Fotel (2 kell) 2.000 Ft - Konyhabútor 6.000 Ft - Ágy 4.000 Ft
+- Rádió 500 Ft
+
+Berendezési tárgyak:
+
+- TV 8.000 Ft
+- Mosógép 6.000 Ft - Porszívó 3.000 Ft
+
+A szerencsekártyákat véletlenszerűen kell generálni; mindegyiknek van egy üzenete (pl. Új cipőt kell venned, Elromlott a porszívód, Jutalmat kaptál, Nyertél a tombolán, stb.) és egy hatása. A hatás egy kisebb összeg (50, 100, 200, 500 Ft) elköltése vagy megnyerése lehet, vagy az, hogy a játékos egy körből kimarad.
+
+A mezők és a berendezési tárgyak listája tovább bővíthető. A program része kell legyen egy automata játékos is, de nem kell túl okosnak lennie (természetesen azért egy picit cselekedjen ésszerűen, pl. ha már van elég pénze és a megfelelő mezőre lép, vegyen lakást, stb.). Elvárás továbbá, hogy a programmal tényleg lehessen játszani, tehát egy minimális kezelőfelületre is szükség van.
+
+

@@ -1,0 +1,50 @@
+ feladat a nyulak és a sasok túlélésének modellezése. Adott egy 8x8-as tábla, ez a rét. A játék kezdetén véletlen választott 20 mezőn bokor, 20 mezőn fű található. Kezdetben 10 nyúl (ebből 5 szupernyúl) él a réten, ezek szintén véletlenszerűen helyezkednek el, de egy mezőn csak egy nyúl lehet. A sasok kezdetben 8-an vannak, és a rét felett keringenek.
+
+A nyúl jellemzője:
+
+életkora, ami kezdetben 1, ez minden körben eggyel nő
+
+energiaszintje (kezdetben 5)
+
+A szupernyúl jellemzője (a nyúl jellemzőin felül):
+
+mindig léphet annyit, hogy elérje a legközelebbi bokrot, azonban ennie neki is kell, és
+
+amelyik körben eszik, abban a körben nem bújhat el
+
+energiaszintje kezdetben 3
+
+A sas jellemzője:
+
+életkora, ami kezdetben 1, ez minden körben eggyel nő
+
+energiaszintje (kezdetben 5)
+
+A játék egy köre a következőképpen zajlik:
+
+a nyulak közül az egyik léphet: maximum kettőt, de csak vízszintes vagy függőleges
+
+irányban
+
+a nyulak célja az, hogy elbújjanak a sasok elől és az, hogy egyenek: elbújni a
+
+bokorban tudnak, enni pedig a füves mezőn
+
+ezután az egyik sas lecsap véletlenszerűen valamelyik nyúlra (a bokros mezőn álló
+
+nyulakat nem látja, tehát ők védett helyen vannak), azonban csak akkor tudja elragadni, ha a nyúl még kicsi (3 évnél fiatalabb), ellenkező esetben túl nagy falat neki, ezért visszavonul, hogy másik áldozatot keressen
+
+a játéknak akkor van vége, ha valamelyik faj minden képviselője kipusztult
+
+Pusztulás:
+Az állatok energiaszintje csak akkor csökken eggyel egy adott körben, ha mozognak, különben változatlan marad. Az evés 2-vel növeli meg az energiaszintet. Ha az energiaszint eléri a nullát, akkor az állat meghal.
+Ha egy állat életkora eléri a 10 évet, akkor ő elpusztul.
+
+Születés:
+Ha az állat életkora eléri az 5 évet, onnantól körönként egy utódja születik, de csak akkor, ha energiaszintje legalább 4. Szupernyúl csak szupernyúltól születhet.
+
+Feladat:
+
+A fenti játék objektumorientált megvalósítása! A játékot két játékos, vagy egy játékos és a számítógép játszhatja egymás ellen. Legyen nyomon követhető, hogy mi történik a táblán (hol van fű, bokor, nyúl), és hogy melyik körben mi változik. A sasok nem a táblán vannak, velük kapcsolatban elég azt jelezni, hányan vannak és melyikük hova csap le. A játék menetét fájlba is írassuk ki, ide minden körről az alábbi információk kerüljenek bele: melyik nyúl lépett, honnan és hova, hova csapott le a sas, kik pusztultak el, a legutolsó kör után pedig kerüljön bele, hogy melyik faj nyert.
+
+

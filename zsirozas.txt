@@ -1,0 +1,33 @@
+ feladat a zsírozás nevű kártyajáték egy módosított változatának megvalósítása Java nyelven. A játékot 2 játékos játssza, egy gépi játékos és egy emberi játékos.
+A klasszikus zsírozást# a 32 lapos magyar kártyapaklival# játsszák. A pakliban minden kártyának van egy színe és egy számértéke. Egy kártya színe lehet piros, tök, zöld, vagy makk. Számértékből 8 van: VII, VIII, IX, X, alsó, felső, király, ász. A 4 szín, és a 8 szám kombinációjával áll elő a 32 kártyalap. Az eredeti játék módosítása abban áll, hogy a pakliba keverünk még 2 darab joker kártyát, amelyek különleges szerepet kapnak a játékban. (Feltételezzük, hogy joker lapok hátoldala megegyezik a pakli többi lapjának hátoldalával, vagyis nem lehet őket megkülönböztetni a kártya felfordítása nélkül.)
+
+A játék menete
+
+A játék a 34 lapos pakli megkeverésével kezdődik, majd mindkét játékosnak osztunk 4-4 kártyalapot. A kiosztatlan lapokat „lefordítva” elérhetővé kell tenni, mert a játék során felhasználásra kerülnek. A játékosok minden kör után innen húznak egy vagy több lapot, annak megfelelően, hogy hány kártya ment ki az adott körben. Sorsolással döntsük el, hogy a gépi játékos, vagy a felhasználó kezd. A kezdő ún. hívással kezdi a játékot.
+
+A hívó játékos felfedi egyik lapját a meglévő 4 közül. Az ellenfélnek ezt a lapot kell megütnie. A hívott kártyát egy vele megegyező számértékű kártyával lehet megütni, a szín nem számít. (Például, ha a hívott lap egy alsó, akkor azt bármelyik más színű alsóval meg lehet ütni.) Speciális lapok a VII-es értékű kártyák, ezek minden lapot ütnek. Ha az ellenfél nem tudja (vagy akarja) megütni a hívott kártyát, akkor is rá kell raknia valamelyiket a meglévő lapjai közül. Ha az ellenfél megütötte a hívott kártyát, a hívó játékos tovább ütheti a lent lévő lapokat, ha van megfelelő ütőkártyája. Ha ez történik, ismét az ellenfél jön, aki vagy tovább üt, vagy egy nem ütő lapot tesz le. Ha például a hívó játékos egy X-essel nyit, és ezt az ellenfél megüti (egy X-essel, vagy VII-essel), a hívó folytathatja egy következő körrel és a letett lapokat másodszor, vagy akár többször is megütheti, a végén pedig az összegyűlt kupac azé lesz, aki a hívott lappal megegyező számértékű utolsó lapot, vagy VII-est tett le. Aki a kupacot elnyerte, az hívhat újra, de előtte mindkét játékosnak ki kell egészítenie a kezében lévő lapokat a lefordított pakliból úgy, hogy 4 kártyája legyen. A játék addig folytatódik, amíg a lefordított lapok el nem fogynak. Az értékes lapok az ász és X-es kártyák, ezeket zsíroknak nevezzük. A győztes az lesz, aki a legtöbb zsírt nyerte el a játszma során.
+
+Joker
+
+Egy joker kártya mindent üt (akárcsak a VII-es), de úgy, hogy ha jokerrel ütött valaki, azt már semmiképp nem lehet tovább ütni, az a játékos viszi az ütést, aki lerakta a jokert. Például, ha a hívó X- est hív, ezt a másik játékos megüti, majd az eredeti hívó jokerrel üt újra, akkor az ellenfél bármit is rakjon (akár jokert), mindenképp az eredeti hívó viszi el a felfordított kártyákat (de az ellenfélnek ekkor is le kell raknia valamilyen kártyát, mindig csak páros elemszámú kupacot lehet elvinni). Ha valamelyik játékos jokert hív, az semmilyen másik lappal nem üthető (még a pakliban lévő másik jokerrel sem), de valamilyen lapot erre is dobnia kell az ellenfélnek.
+
+Játékosok
+
+Az emberi játékost a felhasználó vezérli, azaz a felhasználó választja ki, melyik lapot hívja, melyikkel üt, stb. Erre a programnak kell lehetőséget biztosítania. Természetesen az emberi játékos nem láthatja a gép lapjait, és a gép sem láthatja a felhasználó lapjait.
+A gépi játékos tetszőleges algoritmus alapján működhet. Lehet például az alábbi: Híváskor a gép véletlenszerűen válasszon a nem zsír, nem VII-es és nem joker lapjai közül, ha ilyen lapokból legalább 3 van. Ha van valamilyen zsírja és azt meg tudja ütni legalább még egyszer (ugyanolyan típusú zsírral, VII-essel, vagy jokerrel), akkor hívja azt a zsírt. Minden más esetben véletlenszerűen válasszon. Ütéskor, ha van megfelelő ütőkártyája, mindig üssön valamelyikkel, ha nem tud ütni, véletlenszerűen válasszon a nem zsír lapok közül, ha csak zsírja van, válasszon közülük egyet. Az algoritmus okosítható, bármi más kitalálható.
+
+Megjegyzések
+
+  Mind a konzolos, mind a grafikus megvalósítás elfogadott, de minkét esetben ügyeljünk arra, hogy a felhasználó minden szükséges információt megtudhasson, amire a játék folyamán szüksége lehet. A saját lapokat mindenképpen jelenítsük meg. Konzolon ez történhet például a lapok színének és számának kiírásával.
+
+  Ügyeljünk arra is, hogy a felhasználót mindig tájékoztassuk, hogy mit kell tennie a játék használatához: milyen inputot kell megadni, azt milyen formában, stb.
+
+  Igyekezzünk a lehető legtöbb hibát, hibás inputot kezelni. Például ne legyen probléma, ha a program számot vár, és szöveget adunk meg neki.
+
+  Tartsukszemelőttakötelezőprogramkövetelményeitésapontozásmikéntjét.
+
+  A programozás előtt gondoljuk át, milyen osztályokat hozunk létre, azoknak milyen kapcsolatai
+
+vannak, melyik lehetne speciális esete a másiknak, mik a közös viselkedések, stb.
+
+

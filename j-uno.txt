@@ -1,0 +1,41 @@
+ feladat egy izgalmas kártyajáték megvalósítása. A játékot minimum 2, maximum 8 személy játszhatja, akik egy gép előtt ülve, egymást követően kerülnek játékba. A játék indításakor kérjük be a felhasználótól, hogy hány játékos fog játszani. A játékosokat egyszerűen sorszámmal azonosíthatjuk (1. játékos, 2. játékos, stb.).
+
+A játékot 112 lapos paklival játsszuk. A játék elején megkeverjük a paklit és minden játékosnak 5-5 lapot osztunk ki. Ezután kisorsoljuk, hogy melyik játékos kezd. A kezdő játékos azzal indítja a játékot, hogy felfedi valamelyik kártyáját a többiek előtt, vagyis kirakja azt a játéktér közepére.
+
+A 112 lapos pakliból 80 kártya ún. számozott kártya. A számozott kártyák egy színnel és egy számmal rendelkeznek. A szín 4 féle lehet: piros, zöld, kék és sárga. A számok pedig 0-tól 9-ig mennek. (Ennek megfelelően mondhatjuk, például hogy piros 2-es, vagy zöld 6-os.) Adott színű és számú kártyából viszont két példány van a pakliban (azaz például piros 6-osból 2 db van). Így jön ki a 4 szín x 10 szám x 2=80 db számozott kártya. A maradék 32 lap speciális tulajdonságú, ún. akciólap. Ezek leírását lásd később.
+
+Miután a kezdő játékos kirakta egy lapját, erre a soron következő játékosnak kell vagy megegyező színű, vagy megegyező számú lapot tennie a saját lapjaiból választva (esetleg játszhat ki akciólapot, lásd később). Ha ez sikerül, vagyis tudott valamilyen lapot rakni az előző játékos kártyájára, akkor a sorban következő játékos kerül játékba, akinek hasonlóan kell eljárnia, vagyis a középre kitett felfordított pakli tetején lévő kártyával megegyező színű, vagy számú kártyát kell tennie (rakhat esetleg akciólapot is, lásd később). Előfordulhat, hogy egy játékos nem rendelkezik megfelelő lappal (vagy azt nem akarja kijátszani). Ekkor a megkevert, még ki nem osztott pakliból kell felvennie egyet, majd az őt követő játékos jön. Az utolsó játékos után ismét a kezdő következik, tehát körbe megyünk. A játékot az nyeri meg, akinek a leghamarabb elfogy a kártyája. Ha ez megtörtént a játéknak vége, kihirdethetjük a győztest. Fontos szabály, hogy amennyiben egy játékosnak már csak 1 kártya van a kezében, azonnal be kell mondania, hogy „UNO”. Ha ezt elmulasztja, 5 lapot kell felvennie a megkevert pakliból.
+
+A játékosok a számozott lapok helyett kijátszhatnak speciális kártyákat is, amelyek megváltoztatják a játék menetét. Ezek az akciólapok. Az akciólapok között vannak színnel rendelkezők, ami azt jelenti, hogy csak a vele megegyező színű lapra játszhatók ki. A színnel rendelkező akciólapok a következők:
+
+Kimarad lap: Kijátszása esetén a következő játékos kimarad a körből, és a következő utáni kerül játékba. Ebből az akciólapból színenként 2, azaz összesen 8 van a pakliban.
+
+Kör megfordítása lap: Kijátszása esetén, megfordul a kör. Ebből a típusból is színenként 2 van.
+
++2-es lap: Kijátszása esetén, a következő játékosnak 2 lapot fel kell vennie, a megkevert pakliból, és ki is marad a körből, kivéve, ha ugyanolyan színű +2-es, vagy +4-es lapot tud rakni. Ez utóbbi esetben viszont a felveendő lapok összegződnek. (Például, ha a 3. játékos sárga +2-est dob, és a 4. játékos erre szintén tud egy sárga +2-est rakni, akkor az 5. játékosnak már 4 lapot kell felvennie.) +2-es lapból szintén 2 db van színenként.
+
+Vannak olyan akciólapok is, amelyek nem rendelkeznek színnel. Ezek bármikor kijátszhatók. 2 típus van:
+
+Színválasztó lap: Az ilyen lapot kijátszó játékos választhat egy színt. A következő játékosnak a választott színnek megfelelő lappal kell folytatni a játékot (vagy szín nélküli akció lappal, mert az bármikor kijátszható). 4 ilyen kártya van a pakliban.
+
++4-es lap: Kijátszása esetén a következő játékosnak 4 lapot kell felvennie a megkevert pakliból és kimarad a körből, ha csak nem tud +4-es lapot rakni. Ahogy a színválasztó lap esetén itt is meg kell mondani, hogy milyen színnel folytatódjon a játék. Összesen 4 ilyen kártya van.
+
+A programnak meg kell jelenítenie az éppen soron lévő játékos lapjait, illetve a már kirakott lapok közül a legfelsőt. A többi játékos lapja természetesen nem látszódhat, de azt az információt meg kell jeleníteni, hogy melyiknél hány kártya van. Biztosítani kell a játékos számára, hogy kiválassza, hogy melyik lapot szeretné lerakni, de ennek szabályosságát ellenőrizni kell. Ha a játékos passzol, vagyis nem tud (vagy akar) megfelelő lapot rakni, akkor automatikusan kerüljön egy új lap a „kezébe” a megkevert pakliból a szabályoknak megfelelően. Hasonlóan járjunk el ha +2-es, vagy +4-es lapok miatt kell felvennie kártyákat. Legyen lehetőség az „UNO” bemondására is, amit ha elfelejt a játékos, ha csak 1 lapja maradt, akkor 5 új lap kerüljön hozzá automatikusan.
+
+Megjegyzések
+
+• Mind a konzolos, mind a grafikus megvalósítás elfogadott, de minkét esetben ügyeljünk arra, hogy a felhasználó minden szükséges információt megtudhasson, amire a játék folyamán szüksége lehet. A lapok megjelenítése konzolon történhet például a lapok színének és számának, vagy típusának kiírásával.
+
+• Ügyeljünk arra is, hogy a felhasználót mindig tájékoztassuk, hogy mit kell tennie a játék használatához: milyen inputot kell megadni, azt milyen formában, stb.
+
+• Igyekezzünk a lehető legtöbb hibát, hibás inputot kezelni. Például ne
+
+legyen probléma, ha a program számot vár, és szöveget adunk meg
+
+neki.
+• Tartsuk szem előtt a kötelező program követelményeit, a pontozás
+
+mikéntjét és a beküldés formátumát.
+• A programozás előtt gondoljuk át, milyen osztályokat hozunk létre,
+
+azoknak milyen kapcsolatai vannak, melyik lehetne speciális esete a másiknak, mik a közös viselkedések, a hasonlóak miben különböznek, stb.
