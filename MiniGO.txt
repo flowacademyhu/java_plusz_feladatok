@@ -1,0 +1,38 @@
+niGO
+A feladat leírása
+A feladat a kínai eredetű, “terület foglalós” táblás játék megvalósítása Java nyelven. A játékot két játékos játssza, akik felváltva helyezi a táblára fekete és fehér köveit egy n x n-es táblára. A tábla mérete (azaz n értéke) függjön a nehézségi szinttől, amely választható az elején:
+Könnyű: n = 9 (a tábla mérete 9 x 9)
+Közepes: n = 13 (a tábla mérete 13 x 13)
+Nehéz: n = 19 (a tábla mérete 19 x 19)
+
+A játék szabályrendszere:
+A játék üres táblán kezdődik.
+A játékot mindig a fekete kővel játszó játékos kezdi.
+A játékosok felváltva lépnek, azaz teszik a tábla metszéspontjaira a köveiket. Közben arra törekszenek, hogy minél több metszéspontot (területet) szerezzenek, azaz kerítsenek be a letett kövekkel, illetve a kövekből "szervezett" alakzatokkal.
+Minden letett kőnek annyi élete van ahány üres, vele vonallal összekötött metszéspont van mellette. Kettő vagy több egymás mellé tett kő csoportot alkot. A csoport életeinek száma is a vele vonallal összekötött szabad metszéspontok összegéből adódik.(A csoportokat alakzatoknak is szokták nevezni)
+
+A táblán egy kőnek 2, 3, vagy 4 élete lehet, ahogy ez az "a", "b" és   "c" jelű köveknél látható.
+A csoportoknak több életük is lehet.
+Az ábrán látható kövek és csoportok életeinek száma:
+a; 2 élet 	e; 16 élet
+b; 3 élet    	f;   8 élet
+c; 4 élet    	g; 16 élet
+d; 6 élet    	h; 11 élet
+
+A táblára tett kövek sok más játékkal ellentétben nem mozognak, de az ellenfél teljesen körülkerített köveit (mivel életei elfogytak) le lehet ütni. Az olyan csoportot, vagy egyedülálló követ, ami teljesen be van kerítve, le kell venni a tábláról. Ezek a foglyok.
+
+a; 1 életet vett el fehér feketétől.
+b; 2 életet vett el fehér feketétől.
+c; 3 életet vett el fehér feketétől. Fekete kő atariban, azaz közvetlen ütésveszélyben van.
+d; 4 életet vett el fehér feketétől. A fekete kőnek nincs több élete, tehát fogoly, amit le kell venni a tábláról.
+e; mivel az előző lépéssel fehér fekete utolsó életét is elvette, ezért a fekete követ le kellett venni a tábláról. A jellegzetes alakzat neve: ponnuki.
+
+Minden körbekerített terület pont / metszéspont / illetve minden fogoly 1-1 pontot ér. Az győz, akinek több pontja van a játszma végén.
+Lépéskényszer nincs. A játékosok kihagyhatják lépésüket, passzolhatnak. Passzolás után megint a másik játékos léphet.
+A játéknak akkor van vége, ha mind a két fél úgy látja, hogy nincs több pontot érő lépés a táblán. Ekkor mindketten passzolnak. A játék végén (a két passz elhangzása után) a semleges pontokat nem számoljuk fel egyik játékos terület pontjai közé.
+
+(Semleges pontnak azok a metszéspontok számítanak melyekre bármelyik játékos is lép, nem tud magának területet szerezni, illetve a másiktól területet elvenni.)
+Linkek
+https://hu.wikipedia.org/wiki/Go
+http://www.flyordie.hu/go/ 
+

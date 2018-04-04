@@ -1,0 +1,92 @@
+Warrior Tabletop mini
+A feladat leírása
+A feladat a MechWarrior Tabletop game egy egyszerűsített változatának megírása.
+Az MW meccseinek lényege, hogy van egy pálya azon Mechek, akik harcolnak egymással, valamilyen objective elérése érdekében. Legegyszerűbb esetben az veszít, akinek először elfogynak a Mechjei a pályáról.
+Minden mechának 8 testrésze van (2 láb, 2 kar, 2 váll, 1 torzó, 1 fej). Minden testrésznek saját armorja és health point(hp)-ja van. A Mechákon 3 féle fegyver lehet, Ballistic (ágyúk), Energy (lézerek) és Missile (rakéták). Minden Mech kasznin meg van adva, hogy milyen fegyver hova függeszthető fel. 
+Feladat
+Megírni pálya és a Mechek kihelyezésének a generálását
+Megírni a körszervezést
+Megírni egy kezelőfelületet
+Megírni a lövés rendszert
+Megírni a sebződés rendszert.
+Pálya Szabályok
+Tekintvén arra, hogy ezt konzolra is szánjuk, nem csak gui-ra, ezért a pályának nem kell túl nagynak lennie, mondjuk 20x20-as pályával beérjük. A pályán csak a 4 égtáj fele tudunk lépni.
+A pályán oldalanként, mivel kicsi, mondjuk 6-6 Mech legyen.
+A pályára generáljunk nehezebben traverzálható terület(ek)et is (pl erdő), ami lassítja a könnyű és a közepes Mecheket (ASCII grafika FTW)
+A pályára generáljunk áthatolhatatlan területeket is.
+Mech Rulez
+Alapvetően 4 féle Mech létezik, feladat legalább súlyonként 1 Mech megírása
+Light (könnyű) (pl Raven) (4-et léphet)
+Közepes (medium) (pl Huchback) (3-at léphet körönként)
+Nehéz (heavy) (pl Grasshopper) (2-t)
+Assault (pl Atlas) (1-et)
+Minden Mech mozdulhat és lőhet minden körben.
+Minden Mech csak azzal a fegyverrel lőhet, amivel eléri a célpontot (és még ép).
+Minden találat először armort (páncélt) ér, és ha az armor elfogyott, akkor a maradék a testrész hp-jából megy. Pl van egy testrésznek 20 páncélja. A testrész kap 25 dmg-t, akkor az armor elfogy, és a testrész kap 5 dmg-t. A testrészt érő sérülés kiritkus is lehet, amit dobókockával sorsolni kell.
+Szétesési szabályok:
+Egy mech elpusztul, ha kilövik a torzót vagy a fejet.
+Ha legalább 1 lábat a Mech mozgásképtelenné válik, de lőni tud.
+Ha egy mechnek a válla elpusztul, magával viszi a megfelelő kart is.
+Körök
+A meccs első lépését sorsolni kell 2 dobókockával. Aki kevesebbet dob (2 kocka összege) az kezd.
+Egy körnek 3 része van. 
+Mozgás
+Támadás
+Sérülések kiosztása
+Mozgás során a kezdő játékos lép egyet egy választott mech-el, aztán a másik játékos, amíg minden Mech nem lépett. (A nem lépés is opció)
+Ez után jön a támadás, hasonló stílusban a lépéshez. Támadáskor lehessen megmondani, hogy a Mech melyik fegyverével melyik Mechre lövünk. 
+Mellélövés esélye:
+Light 75%
+Medium: 50%
+Heavy: 37,5
+Assault: 25% 
+Találat esetén esély, hogy melyik testrészt éri:
+Bal kar 10%
+Bal váll 13%
+Bal láb 13%
+Jobb láb 15%
+Jobb váll 15%
+Jobb kar 10%
+Test 19%
+Fej 5%
+És végül a sérülések kiosztása. (Ez mehet egyszerre)
+Minden kör elején sorsolás újra
+Fegyverek
+Mint már említettük 3 féle fegyver van, Ballistic, Missile és Energy.
+Laserek:
+A laserek sebzését egyesélvel kell sebezni a Mechbe, így
+Egyszer rollolni kell, hogy talált-e
+Aztán rollolni, hogy hol,
+Aztán 1-esével levonni a pontot, és 1-esével rollolni, hogy a sebzés fegyvert visz-e?
+Small/medium/large laser: 
+dmg: 3/6/9
+range: 1/2/3
+Missile:
+A rakéták dmg-t rakétánként kell kiosztani (roll talált-e, roll, hogy hol (célzott, vagy fürdik), roll, hogy bont-e fegyvert).
+Short Range Missile:
+range 2
+dmg: rakétánként 2 
+Variánsok: 2, 4, 6 rakéta
+Long Range Missile:
+min lőtáv: 2
+max lőtáv: 6
+sebzés: rakétánként 1
+variánsok: 5, 10, 15, 20 rakéta
+Ballistic:
+1 golyót lőnek, kisebb golyó, kevesebb dmg, nagyobb lőtáv.
+AC/X:
+X pontot sebez egyben,
+lőtáv 20/X, de legfeljebb 5
+Az ütésnek legyen annyi x% esélye ahányat sebzett a Mech-be, hogy kiüssön egy fegyvert. Pl 20 esetén 20%, 1 esetén 1%.
+Példa Mechek:
+Atlas (Assault): 2 Med. Laser karonként, 2 SRM 6 Bal vállban, 1 AC/20 jobb váll. Armorok:
+Fej: 18, Vállak 84, karok 68, lábak 84, test 124
+Grashopper (Heavy): Torzó 1 nagylézer, vállanként és karonként 1-1 med. lézer, fejben egy LRM 5
+Fej: 18, Vállak 60, karok 44, lábak 60, test 88
+Hunchback (Medium): jobb torzóban 6, fejben 1, karonként 1-1 medium laser
+Fej 18, vállak 48, karok 32, lábak 48, torzó 64
+Raven (Light): jobb kézben 2 nagylézer.
+Fej 18, vállak 32, karok 24, lábak 32, test 44
+Linkek
+Mechlabor további mechek készítéséhez: http://mwo.smurfy-net.de/
+

@@ -1,0 +1,37 @@
+rthstone Simple
+A feladat leírása
+A feladat egy játék megvalósítása Java nyelven. A játékot két játékos játszhatja, egymás ellen. A játék során két hős harcol egymással a kártyák által reprezentált harcosok és varázslatok segítségével. A vesztes az a hős lesz, akinek először elfogynak az életerőpontjai.
+A játék egy játéktéren, kártyákkal játszódik. Mindkét játékosnak saját térfele van. Erre rakhatják le katonáikat [minion], melyek ezen helyet foglalnak. Egy térfélen maximum 5 katona állhat.
+A játék körökre van osztva, melyek során a játékosok felváltva tevékenykednek. Minden játékos rendelkezik egy kaszttal, és életerőpontokkal, ez alapból 30. Minden kaszthoz tartozik egy speciális képesség, amelyet a játékosok körönként egyszer használhatnak 2 manáért. A választható kasztok, és képességeik:
+-Cleric [Pap] - egy karaktert (katonát vagy hőst) két életerőponttal gyógyít
+-Mage [Mágus] - egy karaktert (katonát vagy hőst) egy életerőponttal megsebez, ez figyelmen kívül hagyja a Taunt képességet is.
+-Warlock [Boszorkánymester] - A játékos hőse két életerőpontot veszít, de húzhat egy kártyát
+-Hunter [Vadász] - A játékos két életerőpontot sebez az ellenfél hősén
+-Paladin - Megidéz a pályára egy képességekkel nem rendelkező 1/1-es katonát
+A játékos rendelkezik egy paklival, melyben 30 kártya van a csata elején, ebből először a játékot kezdő játékos hármat, ellenfele pedig négyet húz, valamint minden kör elején (az első elején is) egyet. Ha valakinek kiürül a paklija, az a játékos körönként egyet sebződik, és nem húz. A játékos a kezében tartott kártyákat teheti le a pályára. Két fajta kártya létezik, katona és varázslat. Minden lapnak van egy mana (varázserő) költsége, amelyet fel kell használni a pályára rakásához. A játékosok első körben egy manával kezdenek, amely minden körben regenerálódik, és körönként egyel több lesz, 10 mana maximumig. A fel nem használt mana pontok nem vihetők át másik körre.
+A katonáknak mind van támadóerejük és életerőpontjuk (a jelölésük itt pl. 4/5-ös katona - 4 támadóerő, 5 életerő). A pályán lévő katonák körönként egyszer támadhatnak, de abban a körben még nem, amikor lerakták őket, hacsak nem rendelkeznek a Charge [Roham] képességgel. Egy támadásnál az ellenséges egység életerejéből le kell vonni a támadó egység támadóerejét, és ha az életerő 1 alá csökken, akkor az ellenséges egység meghal, eltűnik a pályáról. Ha katonát támad, akkor ez a levonás visszafelé is érvényes, mert a katona visszatámad, így a katona is belehalhat a támadásba. Hős (azaz a játékos) nem támad vissza az ütésekre. A katonák különböző képességekkel is rendelkezhetnek, ezek: Taunt [Felhergelés] - az ellenfélnek nem lehetséges a játékos Taunt-al nem rendelkező karaktereit támadni (a hőst sem), amíg ez az egység életben van, Charge [Roham] - rögtön a lerakás után támadhat, Battlecry [Csatakiáltás] - valamely képességet végrehajt rögtön lerakáskor. A különböző képességű harcosoknak is mindnek van támadóereje és életerőpontja.
+A megvalósítandó katona kártyák: Legalább 6 tetszőleges egyszerű egység különböző pontokkal, képességek nélkül, valamint 4 Taunt-al és 2 Charge-al ellátott katona. Ezen kívül a következő Battlecry képességekkel rendelkező legalább 1-1 katona:
+-Egy másik katona támadóerejét és életerejét is megnöveli 1-el (továbbiakban az ilyen +1/+1)
+-Egy másik katona összes bónuszát semlegesíti
+-A pályán lévő baráti egységenként magának +1/+1-et ad
+-Egy karaktert (akár hőst is) gyógyít 4 életerőponttal
+-A játékos húzhat két kártyát paklijából
+-Minden karakteren (hősökön is, és még barátiakon is) 2-t sebez
+-Minden katonát (barátiakat is) megöl, akik 3 támadóerő felett vannak
+Ezen kívül legyen még legalább egy olyan katona, amely minden, a pályán befejezett kör hatására +1/+0, és egy amely +1/+1-et kap.
+A katonák lerakása is manába kerül. A katonákhoz tartozó mana költségek, illetve alap életerő és támadó pontok megállapítását az optimális élvezhetőség érdekében kell kialakítani.
+A varázskártyák nem foglalnak helyet a pályán, egyszer aktiválódnak, és eltűnnek. A megvalósítandó varázskártyák, és hozzájuk tartozó mana költségek:
+-Egy  választott katonának +3/+3 (3 mana)
+-Egy választott katona mellett álló két (ha vannak ilyenek) katona +1/+1 (3 mana)
+-Egy kiválasztott katonát visszaküld tulajdonosa kezébe (ilyenkor az összes esetleges bónusza elveszik, viszont az esetleges képességei is újra aktiválhatóak) (2 mana)
+-Egy ellenséges katonát átállít a játékos oldalára (10 mana)
+-Egy karaktert (akár hőst is) 4 életerőponttal sebez (4 mana)
+-A játékos hősét az ellenfél következő körében nem lehet megsebezni (5 mana)
+-Lefagyaszt egy kiválasztott ellenséges katonát, aki a következő körben nem hajthat végre támadást (visszatámadás ilyenkor is lehetséges) (3 mana)
+A megvalósított kártyák közül minden játékosnak sorsoljunk a csata elején 30-at (természetesen ismétlődhetnek), ebből áll a össze a paklija.
+Gyógyítás során az életerőpontok sosem mehetnek az eddigi maximális fölé (az egyszerű növelésnél viszont igen).
+Az összes kártyának legyen neve (pl.Útonálló, Kalóz, Ork vezér, Vad medve, varázslatra pl. Tűzgolyó). A játék során jelenítsük meg a pályát valamilyen módon, illetve a játékos kezében lévő lapokat is láthassa, ellenfeléét viszont nem. A pályán, és a játékos kezében lévő kártyák tulajdonságai legyenek mindig nyomon követhetőek. A játékos a köre elején mindig értesüljön ellenfele tevékenységeiről.
+
+Linkek
+Az eredeti játék: http://us.battle.net/hearthstone/en/
+
