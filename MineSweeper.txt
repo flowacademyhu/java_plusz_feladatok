@@ -1,0 +1,13 @@
+Aknakereső:
+A feladat egy felturbózott aknakereső készítése. A játék indításkor 3 pályaméretet ajánl fel: 5x5, 10x10, 15x15, továbbá a nehézség 'könnyű', 'közepes', 'nehéz' lehet. 
+A játékos rendelkezik élettel, azaz egy akna felrobbanása során nem hal meg, amennyiben van még élete. 
+A pályán nem csak aknák lehetnek, hanem HP csomagok is, ezek 1 életet jelentenek. A HP csomagok elhelyezkedése teljesen véletlenszerű, a körülöttük lévő mezők nem utalhatnak rá.
+A pálya generálása során a nehézségtől függően megfelelő számú aknát, és élet csomagot kell generálni. 
+- könnyű: 2N darab akna, 2 élet, N/2 HP csomagok
+- közepes: (NxN)/3 darab akna, 1 élet, N/3 HP csomagok
+- nehéz: (NxN)/2 darab akna, 1 élet, 0 HP csomag 
+N a pálya szélessége.
+
+A generálás során figyelj rá, hogy az aknák körül lévő mezők megfelelő értékeket kapjanak. 
+Legyen lehetőség jobb egérgombbal zászlót lerakni. (Ne lehessen több zászló lent, mint akna!)
+A játéknak vége, ha a játékosnak elfogytak az életei, vagy nem maradt felfedetlen nem bombát tartalmazó mező.

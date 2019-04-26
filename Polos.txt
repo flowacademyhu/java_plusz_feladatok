@@ -1,0 +1,18 @@
+Bejönnek a poloskák.
+Poloskák lettünk, a célunk pedig bejutni az ablakok résein. A játék egy 20x20-as táblán játszódik. A játékos a tábla alján helyezkedik el, és vízszintes irányban képes mozogni. A játék során adott távolságonként majdnem az egész sort kitöltő ablakok érkeznek. A játékos feladata az ablakon hagyott 2 egység széles résken való bejutás. Az ablakon minimum 2, maximum 4 rés lehet, ez véletlenszerűen generálódjon! Amennyiben a játékos a falnak ütközik, a játéknak vége. Az ablakok 6 egységenként követik egymást.
+Példa (kicsinyített játéktérrel)
+
+##########################
+#						 #
+#WWWWWWW  WWWWWWWWWWWWWWW#
+#						 #
+#						 #
+#WW  WWWWWWWWW  WWWWWWWWW#
+#						 #
+#    P 					 #
+##########################
+
+W - ablak
+P - játékos 
+
+A játék során a játékos minden résen való áthaladás során 1 pontot kap. 4 pontonként növekedjen a játék sebessége!

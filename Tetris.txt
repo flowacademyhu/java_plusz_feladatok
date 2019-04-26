@@ -1,0 +1,8 @@
+Tetris
+A feladat egy Tetris megvalósítása. A játék egy 10x20 méretű játéktéren zajlik. 
+A hagyományos alakzatok adottak a játék során. A játékos pontokat szerez, melyeket egy teljes sor törlésekor kap. 
+Egy sort akkor törölhetünk, ha az összes cellájában található valamely alakzatból pont. Ügyelj rá, hogy a sor törlésekor a felette lévő sorok "leessenek"! Továbbá több sor is törlődhet egy iterációban.
+A program jelezze ki a következő alakzatot. Ezeket véletlenszerűen sorsold!
+A játék folyamán az esési sebesség gyorsuljon a pontok növekedésével. Felső korlátot érdemes azért szabni.
+A játékos billentyűk segítségével forgathatja, irányíthatja az elemeket. 
+A játéknak akkor van vége, ha a soron következő elem nem tud a pályára kerülni.
